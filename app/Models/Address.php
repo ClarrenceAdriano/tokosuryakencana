@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Address extends Model
+{
+    protected $fillable = [
+        'user_id',
+        'name',
+        'recipient_name',
+        'phone_number',
+        'address',
+        'city',
+        'postal_code',
+        'is_default',
+    ];
+
+    protected $casts = [
+        'is_default' => 'boolean',
+    ];
+    /**
+     * Get the user that owns the address.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+}

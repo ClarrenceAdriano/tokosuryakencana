@@ -1,0 +1,1 @@
+<img src="{{ asset('storage/logo/LogoSK.png') }}" alt="Logo Toko Surya Kencana" {{ $attributes }}>
