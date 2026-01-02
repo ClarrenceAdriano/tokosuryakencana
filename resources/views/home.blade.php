@@ -24,7 +24,6 @@
                                 style="height: 70vh; object-fit: cover; filter: brightness(0.6);" alt="{{ $slider->name }}">
 
                             <div class="carousel-caption d-none d-md-block pb-3">
-                                <h2 class="fw-bold">{{ $slider->name }}</h2>
                                 <p class="fs-5">Rp {{ number_format($slider->price, 0, ',', '.') }}</p>
                                 <a href="{{ route('products.detail', $slider->id) }}"
                                     class="btn btn-outline-light btn-sm mt-2">Lihat Detail</a>
