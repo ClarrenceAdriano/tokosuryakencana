@@ -65,28 +65,33 @@
         </div>
     </div>
 
-    <div class="card-footer bg-white py-3 border-top">
-        <form wire:submit.prevent="sendMessage" class="d-flex align-items-center gap-2">
+<div class="card-footer bg-white py-3 border-top">
+    <form wire:submit.prevent="sendMessage" class="d-flex align-items-center gap-2">
 
-            <div class="position-relative w-100">
-                <input type="text" wire:model="messageText"
-                    class="form-control rounded-pill bg-light border-0 py-2 ps-4 pe-5" placeholder="Tulis pesan..."
-                    autocomplete="off" required>
+        <div class="position-relative w-100">
+            <input type="text" wire:model="messageText"
+                class="form-control rounded-pill bg-light border-0 py-2 ps-4 pe-5" 
+                placeholder="Tulis pesan..."
+                autocomplete="off" required>
+        </div>
 
-                <div wire:loading wire:target="sendMessage"
-                    class="position-absolute top-50 end-0 translate-middle-y me-3">
-                    <div class="spinner-border spinner-border-sm text-primary" role="status"></div>
-                </div>
+        <button type="submit"
+            class="btn btn-primary rounded-pill shadow-sm fw-bold d-flex align-items-center justify-content-center"
+            style="height: 45px; min-width: 100px;" 
+            wire:loading.attr="disabled"
+            wire:target="sendMessage">
+            
+            <span wire:loading.remove wire:target="sendMessage">
+                Kirim <i class="bi bi-send-fill ms-1"></i>
+            </span>
+
+            <div wire:loading wire:target="sendMessage">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             </div>
+        </button>
 
-            <button type="submit"
-                class="btn btn-primary rounded-pill shadow-sm px-4 fw-bold d-flex align-items-center gap-2"
-                style="height: 45px;" wire:loading.attr="disabled">
-                <span>Kirim</span>
-                <div wire:loading wire:target="sendMessage" class="spinner-border spinner-border-sm ms-1"></div>
-            </button>
-        </form>
-    </div>
+    </form>
+</div>
 
     <script>
         document.addEventListener('livewire:initialized', () => {
