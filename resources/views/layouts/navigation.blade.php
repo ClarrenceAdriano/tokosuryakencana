@@ -35,7 +35,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('transaction.*') ? 'active fw-bold' : '' }}"
-                        href="{{ route('transaction.index') }}">
+                        href="{{ auth()->user()->role === 'admin' ? route('transaction.admin') : route('transaction.index') }}">
                         Transaction
                     </a>
                 </li>

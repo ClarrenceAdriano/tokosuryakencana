@@ -42,6 +42,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::patch('/reviews/{id}', [ReviewController::class, 'update'])->name('reviews.update');
     Route::delete('/reviews/{id}', [ReviewController::class, 'destroy'])->name('reviews.destroy');
+
+    Route::get('/admin', [AdminTransactionController::class, 'index'])->name('transaction.admin');
 });
 
 Route::middleware('auth')->group(function () {

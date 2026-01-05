@@ -88,7 +88,7 @@
                                         value="transfer" checked>
                                     <label class="btn btn-outline-secondary w-100 h-100 py-3 text-start" for="pay-transfer">
                                         <i class="bi bi-bank fs-4 mb-2 d-block"></i>
-                                        <span class="fw-bold">Transfer Bank</span>
+                                        <span class="fw-bold">Transfer Bank : 0883043990 BCA</span>
                                     </label>
                                 </div>
                             </div>
