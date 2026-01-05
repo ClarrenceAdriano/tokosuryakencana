@@ -50,16 +50,16 @@
                                             <div class="flex-grow-1">
                                                 <div class="d-flex justify-content-between">
                                                     <h6 class="mb-0 fw-bold">
-                                                        {{ $address->recipent_name ?? Auth::user()->name }}</h6>
+                                                        {{ $address->name ?? Auth::user()->name }}</h6>
                                                     @if ($address->is_default)
                                                         <span class="badge bg-secondary">Utama</span>
                                                     @endif
                                                 </div>
                                                 <p class="mb-0 text-muted small mt-1">
-                                                    {{ $address->street }}, {{ $address->city }}, {{ $address->province }}
+                                                    {{ $address->recipient_name }}, {{ $address->address }}, {{ $address->city }}
                                                     {{ $address->postal_code }}
                                                 </p>
-                                                <small class="text-muted">Telp: {{ $address->phone }}</small>
+                                                <small class="text-muted">Telp: {{ $address->phone_number }}</small>
                                             </div>
                                         </label>
                                     @endforeach
