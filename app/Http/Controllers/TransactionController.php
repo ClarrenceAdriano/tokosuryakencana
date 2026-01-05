@@ -148,7 +148,7 @@ class TransactionController extends Controller
     public function updateStatus(Request $request, Transaction $transaction)
     {
         // Security Check
-        if ($transaction->user_id !== Auth::id() && Auth::user()->role !== 'admin') {
+        if ($transaction->user_id != Auth::id() && Auth::user()->role != 'admin') {
             abort(403, 'Unauthorized action.');
         }
 
