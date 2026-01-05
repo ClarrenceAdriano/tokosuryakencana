@@ -14,9 +14,9 @@
 
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 font-weight-bold">Kontak</h5>
-                <p><i class="fas fa-home mr-3"></i> Surabaya, Indonesia</p>
-                <p><i class="fas fa-envelope mr-3"></i> support@website.com</p>
-                <p><i class="fas fa-phone mr-3"></i> +62 812 3456 7890</p>
+                <p><i class="fas fa-home mr-3"></i> Jl. Timor No. 27, Ende, Wajo, Maksar, Sulawesi Selatan, Indonesia</p>
+                <p><i class="fas fa-envelope mr-3"></i> @tsk_388</p>
+                <p><i class="fas fa-phone mr-3"></i> (0411) 3615375</p>
             </div>
         </div>
     </div>
