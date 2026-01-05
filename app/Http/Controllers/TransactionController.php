@@ -131,7 +131,7 @@ class TransactionController extends Controller
         // SECURITY CHECK:
         // Pastikan yang melihat nota ini adalah PEMILIK transaksi atau ADMIN.
         // Jangan sampai User A mengintip belanjaan User B.
-        if ($transaction->user_id !== Auth::id() && Auth::user()->role !== 'admin') {
+        if ($transaction->user_id != Auth::id() && Auth::user()->role !== 'admin') {
             abort(403, 'Unauthorized action.');
         }
 
