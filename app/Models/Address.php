@@ -20,9 +20,7 @@ class Address extends Model
     protected $casts = [
         'is_default' => 'boolean',
     ];
-    /**
-     * Get the user that owns the address.
-     */
+
     public function user()
     {
         return $this->belongsTo(User::class);

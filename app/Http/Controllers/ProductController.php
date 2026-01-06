@@ -118,18 +118,12 @@ class ProductController extends Controller
             ->with('success', 'Produk berhasil diperbarui.');
     }
 
-    /**
-     * 7. DESTROY: Menghapus Produk
-     * Jangan lupa menghapus file gambarnya juga agar tidak jadi file sampah (orphan file).
-     */
     public function destroy(Product $product)
     {
-        // 1. Hapus file fisik gambar jika ada
         if ($product->image) {
             Storage::disk('public')->delete($product->image);
         }
 
-        // 2. Hapus data dari database
         $product->delete();
 
         return redirect()->route('products.index')
